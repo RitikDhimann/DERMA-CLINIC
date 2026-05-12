@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { treatments } from '../data/treatments';
@@ -34,36 +33,27 @@ const Treatments = () => {
 
         {/* Grid */}
         {/* Mobile Swiper */}
-        <div className="md:hidden pb-4 px-4 relative">
+        <div className="md:hidden pb-4 px-2 sm:px-4 relative max-w-md mx-auto">
           <Swiper
             style={{
               '--swiper-pagination-color': '#C5A028',
             }}
-            effect={'coverflow'}
+            spaceBetween={20}
             grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={'auto'}
-            initialSlide={1}
-            coverflowEffect={{
-              rotate: 30,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
+            slidesPerView={1}
             navigation={{
               nextEl: '.custom-swiper-button-next',
               prevEl: '.custom-swiper-button-prev',
             }}
             pagination={{ clickable: true, dynamicBullets: true }}
-            modules={[EffectCoverflow, Pagination, Navigation]}
-            className="w-full pb-14 group"
+            modules={[Pagination, Navigation]}
+            className="w-full pt-4 pb-12 px-12 group"
           >
             {treatments.map((treatment, index) => (
-              <SwiperSlide key={index} className="w-[85%] sm:w-[60%]">
+              <SwiperSlide key={index} className="pb-10 pt-2">
                 <Link to={`/treatment/${treatment.slug}`} className="block h-full">
                   <motion.div
-                    className="group h-full relative bg-white p-6 rounded-3xl border border-gray-50 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] overflow-hidden"
+                    className="group h-full relative bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden"
                   >
                     <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full ${treatment.color} opacity-40 blur-2xl transition-transform duration-500`}></div>
                     <div className={`w-14 h-14 rounded-2xl ${treatment.color} flex items-center justify-center mb-8 transition-transform duration-300`}>
@@ -82,11 +72,11 @@ const Treatments = () => {
           </Swiper>
           
           {/* Custom Navigation Buttons */}
-          <div className="custom-swiper-button-prev absolute left-0 top-[40%] -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-brand-gold/20 flex items-center justify-center text-brand-gold cursor-pointer hover:bg-brand-gold hover:text-white transition-all active:scale-95">
-            <ChevronLeft size={20} strokeWidth={2.5} />
+          <div className="custom-swiper-button-prev absolute left-0 sm:left-1 top-[38%] -translate-y-1/2 z-10 w-9 h-9 bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-brand-gold/30 flex items-center justify-center text-brand-gold cursor-pointer hover:bg-brand-gold hover:text-white transition-all active:scale-95">
+            <ChevronLeft size={18} strokeWidth={2.5} />
           </div>
-          <div className="custom-swiper-button-next absolute right-0 top-[40%] -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-brand-gold/20 flex items-center justify-center text-brand-gold cursor-pointer hover:bg-brand-gold hover:text-white transition-all active:scale-95">
-            <ChevronRight size={20} strokeWidth={2.5} />
+          <div className="custom-swiper-button-next absolute right-0 sm:right-1 top-[38%] -translate-y-1/2 z-10 w-9 h-9 bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-brand-gold/30 flex items-center justify-center text-brand-gold cursor-pointer hover:bg-brand-gold hover:text-white transition-all active:scale-95">
+            <ChevronRight size={18} strokeWidth={2.5} />
           </div>
         </div>
 
@@ -100,7 +90,7 @@ const Treatments = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="group h-full relative bg-white p-6 rounded-3xl border border-gray-50 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group h-full relative bg-white p-6 rounded-3xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
               >
                 <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full ${treatment.color} opacity-40 blur-2xl group-hover:scale-150 transition-transform duration-500`}></div>
                 <div className={`w-14 h-14 rounded-2xl ${treatment.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
