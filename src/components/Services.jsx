@@ -30,7 +30,7 @@ const services = [
   {
     title: "Hair PRP Therapy",
     category: "Clinical",
-    image: "https://images.unsplash.com/photo-1591130901223-99937397779d?auto=format&fit=crop&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnBjjQ72tsTMTI04NY4HOAhPl7-_8HShwPVg&s",
   }
 ];
 

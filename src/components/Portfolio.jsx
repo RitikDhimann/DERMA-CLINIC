@@ -71,13 +71,13 @@ const testimonials = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="pt-4 pb-4 md:pb-24 bg-white relative">
+    <section id="portfolio" className="pt-4 pb-4 md:pb-8 bg-white relative">
       <div className="container-custom">
 
 
 
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24 max-w-3xl mx-auto px-4">
+        <div className="text-center mb-10 md:mb-10 max-w-3xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ const Portfolio = () => {
         </div>
 
         {/* Video Testimonials Section */}
-        <div className="mt-10 mb-16 px-4 md:px-0">
+        <div className="mt-10 mb-6 md:mb-12 px-4 md:px-0">
           <div className="text-center mb-12 md:mb-16">
             <span className="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">Authentic Stories</span>
             <h2 className="text-4xl md:text-5xl font-serif text-[#3E3232] uppercase tracking-tighter"><span className="italic">Testimonials</span></h2>
@@ -215,7 +215,7 @@ const Portfolio = () => {
         </div>
 
         {/* Instagram Feed Integration */}
-        <div className="mt-32 mb-16">
+        <div className="mt-6 md:mt-12 mb-16">
           <div className="text-center mb-16">
             <span className="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">Social Media</span>
             <h2 className="text-4xl md:text-5xl font-serif text-[#3E3232] uppercase tracking-tighter">Insta <span className="italic">Moments</span></h2>

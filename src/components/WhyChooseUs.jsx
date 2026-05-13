@@ -27,7 +27,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="px-6 md:px-12 lg:px-24 pt-4 md:pt-20 pb-4 md:pb-20 bg-brand-white relative overflow-hidden">
+    <section className="px-6 md:px-12 lg:px-24 pt-4 md:pt-8 pb-4 md:pb-8 bg-brand-white relative overflow-hidden">
       {/* Decorative Blur */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2"></div>
       

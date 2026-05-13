@@ -11,7 +11,7 @@ import { treatments } from '../data/treatments';
 
 const Treatments = () => {
   return (
-    <section id="treatments" className="pt-8 md:pt-24 pb-4 bg-white overflow-hidden">
+    <section id="treatments" className="pt-8 md:pt-8 pb-4 bg-white overflow-hidden">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-10 px-4">

@@ -11,7 +11,7 @@ const InstagramIcon = ({ size = 24 }) => (
 
 const Contact = () => {
   return (
-    <section id="contact" className="px-6 md:px-12 lg:px-24 pt-4 md:pt-12 pb-20 md:py-20 bg-brand-white">
+    <section id="contact" className="px-6 md:px-12 lg:px-24 pt-4 md:pt-8 pb-20 md:pb-20 bg-brand-white">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           

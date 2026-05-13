@@ -8,7 +8,7 @@ const Hero = () => {
       {/* WhatsApp Floating Button - Left */}
       <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
         <a 
-          href="https://wa.me/919000235537" 
+          href="https://wa.me/919876543210" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-12 h-12 bg-[#25D366] text-white flex items-center justify-center rounded-sm shadow-lg hover:scale-110 transition-transform"
@@ -97,7 +97,6 @@ const Hero = () => {
                <div className="w-12 h-12 rounded-full border-t border-brand-gold/30"></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
